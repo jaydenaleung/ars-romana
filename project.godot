@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ars Romana"
-run/main_scene="uid://cbnpifv0h5a7f"
+run/main_scene="uid://bau4dpo3j8eun"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
