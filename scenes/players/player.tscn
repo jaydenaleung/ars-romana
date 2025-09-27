@@ -1,0 +1,173 @@
+[gd_scene load_steps=20 format=3 uid="uid://bhy7ywu2pd4d7"]
+
+[ext_resource type="Texture2D" uid="uid://owa6l4pjx2ut" path="res://assets/characters/players/players_1.png" id="1_plyga"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldeu4"]
+atlas = ExtResource("1_plyga")
+region = Rect2(16, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc87p"]
+atlas = ExtResource("1_plyga")
+region = Rect2(16, 60, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edvpf"]
+atlas = ExtResource("1_plyga")
+region = Rect2(16, 20, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olb2f"]
+atlas = ExtResource("1_plyga")
+region = Rect2(16, 40, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sguum"]
+atlas = ExtResource("1_plyga")
+region = Rect2(0, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwv1m"]
+atlas = ExtResource("1_plyga")
+region = Rect2(16, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phaeh"]
+atlas = ExtResource("1_plyga")
+region = Rect2(32, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl2j2"]
+atlas = ExtResource("1_plyga")
+region = Rect2(0, 60, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es4m5"]
+atlas = ExtResource("1_plyga")
+region = Rect2(16, 60, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsrjl"]
+atlas = ExtResource("1_plyga")
+region = Rect2(32, 60, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mh0hk"]
+atlas = ExtResource("1_plyga")
+region = Rect2(0, 20, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18rgo"]
+atlas = ExtResource("1_plyga")
+region = Rect2(16, 20, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wb5ey"]
+atlas = ExtResource("1_plyga")
+region = Rect2(32, 20, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjh8g"]
+atlas = ExtResource("1_plyga")
+region = Rect2(0, 40, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1232"]
+atlas = ExtResource("1_plyga")
+region = Rect2(16, 40, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7vuu"]
+atlas = ExtResource("1_plyga")
+region = Rect2(32, 40, 16, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bdc4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldeu4")
+}],
+"loop": true,
+"name": &"idle-back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kc87p")
+}],
+"loop": true,
+"name": &"idle-forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edvpf")
+}],
+"loop": true,
+"name": &"idle-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olb2f")
+}],
+"loop": true,
+"name": &"idle-right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sguum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwv1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phaeh")
+}],
+"loop": true,
+"name": &"walk-back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl2j2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es4m5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsrjl")
+}],
+"loop": true,
+"name": &"walk-forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mh0hk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18rgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wb5ey")
+}],
+"loop": true,
+"name": &"walk-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjh8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1232")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7vuu")
+}],
+"loop": true,
+"name": &"walk-right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qb7t6"]
+size = Vector2(16, 19)
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_bdc4e")
+animation = &"idle-back"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_qb7t6")
