@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://bhy7ywu2pd4d7" path="res://scenes/players/player.tscn" id="2_fyeyp"]
 [ext_resource type="Texture2D" uid="uid://bo24r5itbr0eg" path="res://assets/scenery/Plant2.png" id="3_namhn"]
 [ext_resource type="Script" uid="uid://b0xgofjt0t77f" path="res://scenes/transition.gd" id="5_namhn"]
-[ext_resource type="PackedScene" uid="uid://r8dlyyuwh27d" path="res://scenes/locations/town1.tscn" id="6_y6jc3"]
 [ext_resource type="Texture2D" uid="uid://d2tkjmkmckx4x" path="res://assets/gui/ui_containers.png" id="7_67y0t"]
 [ext_resource type="PackedScene" uid="uid://dsah6iy7g8xr" path="res://scenes/players/npc-r1-1.tscn" id="7_66444"]
+[ext_resource type="PackedScene" uid="uid://r8dlyyuwh27d" path="res://scenes/locations/town1.tscn" id="7_qhx6d"]
 [ext_resource type="Script" uid="uid://y14t6mk3jcly" path="res://scenes/players/npc.gd" id="8_qhx6d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y6jc3"]
@@ -380,7 +380,7 @@ position = Vector2(102, 53)
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("5_namhn")
-transitionRoom = ExtResource("6_y6jc3")
+transitionRoom = ExtResource("7_qhx6d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(161.25, -52.75)
